@@ -11,12 +11,12 @@ function Card(props) {
       <div className='col s2'>
         <div className='card hoverable small'>
           <div className='card-image'>
-            <img src={props.whatever} />
+            <img src={props.data.image} />
           </div>
 
           <div className='card-content'>
-            <p>{props.title}</p>
-            <p>{props.name}</p>
+            <p>{props.data.subject}</p>
+            <p>{props.data.instructor}</p>
           </div>
 
           <div className='card-action'>
