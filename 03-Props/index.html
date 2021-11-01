@@ -21,13 +21,20 @@
     ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script type="text/babel" src="./Card.js"></script>
+    <script src="./data.js"></script>
   </head>
   <body>
     <div id="root"></div>
 
     <script type="text/babel">
 
-      ReactDOM.render(<Card />, document.getElementById('root'))
+      ReactDOM.render(
+        <div className="row">
+          <Card name={data[0].instructor} title={data[0].subject} />
+          <Card name={data[1].instructor} title={data[1].subject} />
+          <Card name={data[2].instructor} title={data[2].subject} />
+        </div>, 
+        document.getElementById('root'))
     </script>
   </body>
 </html>
